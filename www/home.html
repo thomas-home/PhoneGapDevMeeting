@@ -36,9 +36,11 @@
 
         <script type="text/javascript">
             
+        var myMedia = null;
+
             function setUpMedia() {
                 alert('getting media oject');
-                var myMedia = null;
+                
                 try {
                     myMedia = new Media("ba_ba_banana.mp3", function () {
                         alert("Opened success");
