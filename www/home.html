@@ -26,23 +26,31 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
-    <body>
+    <body onload="onLoad()">
 
-         <h1>Home Page</h1>
+         <h1 style="font-size:20px; font-weight:bold;">Home Page</h1>
          <br />
-         <a href="#" onclick="play()">Click me</a>
+         <a style="font-size:16px; font-weight:bold;" href="#" onclick="play()">Click me</a>
 
         <script type="text/javascript" src="cordova.js"></script>
 
         <script type="text/javascript">
             var myMedia = new Media("ba_ba_banana.mp3", function () {
-                alert('Opened success');
+                alert("Opened success");
             }, function() {
-                alert('Failed to open');
+                alert("Failed to open");
             });
 
             function play() {
                 myMedia.play();
+            }
+
+            function onLoad() {
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+
+            function onDeviceReady(){
+                alert("Got device ready");
             }
         </script>
 
