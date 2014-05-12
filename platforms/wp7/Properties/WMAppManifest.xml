@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Deployment AppPlatformVersion="7.1" xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment">
+    <App Author="PhoneGapDevMeeting author" BitsPerPixel="32" Description="Apache Cordova for Windows Phone 7" Genre="apps.normal" ProductID="{468C2AAD-7151-4852-9156-21169B8C82E0}" Publisher="PhoneGapDevMeeting" RuntimeType="Silverlight" Title="PhoneGapDevMeeting" Version="0.0.1" xmlns="">
+        <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
+        <Capabilities>
+            <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+            <Capability Name="ID_CAP_NETWORKING" />
+        </Capabilities>
+        <Tasks>
+            <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+        </Tasks>
+        <Tokens>
+            <PrimaryToken TaskName="_default" TokenID="PhoneGapDevMeetingToken">
+                <TemplateType5>
+                    <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+                    <Count>0</Count>
+                    <Title>PhoneGapDevMeeting</Title>
+                </TemplateType5>
+            </PrimaryToken>
+        </Tokens>
+    </App>
+</Deployment>
