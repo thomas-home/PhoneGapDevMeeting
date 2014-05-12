@@ -35,13 +35,22 @@
         <script type="text/javascript" src="cordova.js"></script>
 
         <script type="text/javascript">
-            var myMedia = new Media("ba_ba_banana.mp3", function () {
-                alert("Opened success");
-            }, function(error) {
-                alert("Failed to open with code: " + error.code + " and message " + error.message);
-            });
+            alert('getting media oject');
+            var myMedia = null;
+            try {
+                myMedia = new Media("ba_ba_banana.mp3", function () {
+                    alert("Opened success");
+                }, function(error) {
+                    alert("Failed to open with code: " + error.code + " and message " + error.message);
+                }, function() {
+                    alert("Status changed");
+                });
+            } catch(e) {
+                alert("Caught error: " + e.message);
+            }
 
             function play() {
+                alert("Attempting to play media");
                 myMedia.play();
             }
 
