@@ -27,10 +27,20 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Home Page</h1>
-        </div>
+
+         <h1>Home Page</h1>
+         <br />
+         <a href="#" onclick="play()">Click me</a>
+
         <script type="text/javascript" src="cordova.js"></script>
+
+        <script type="text/javascript">
+            myMedia = new Media("ba_ba_banana.mp3");
+
+            function play() {
+                myMedia.play();
+            }
+        </script>
 
     </body>
 </html>
