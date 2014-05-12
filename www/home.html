@@ -35,7 +35,11 @@
         <script type="text/javascript" src="cordova.js"></script>
 
         <script type="text/javascript">
-            myMedia = new Media("ba_ba_banana.mp3");
+            myMedia = new Media("ba_ba_banana.mp3", function () {
+                alert('Opened success');
+            }, function() {
+                alert('Failed to open')
+            });
 
             function play() {
                 myMedia.play();
